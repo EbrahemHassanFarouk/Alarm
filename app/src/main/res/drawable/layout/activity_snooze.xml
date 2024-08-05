@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SnoozeActivity"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/toolbar_back_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/backArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/arrow_back"
+            android:textColor="@color/text_color"
+            android:text="   "
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:background="@drawable/ripple_action_circle"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Snooze"
+            android:layout_toRightOf="@id/backArrow"
+            android:textSize="@dimen/_20ssp"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:layout_marginVertical="@dimen/_16sdp"
+            android:textColor="@color/text_color"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/containerOnOffSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5sdp"
+        >
+
+        <Switch
+            android:id="@+id/switchSnooze"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner"
+            android:checked="true"
+            android:padding="20dp"
+            android:text="On"
+            android:textOff="Off"
+            android:textOn="On"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Interval"
+        android:textSize="@dimen/_12ssp"
+        android:layout_margin="@dimen/_10sdp"
+        />
+    <ListView
+        android:id="@+id/LVInterval"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_less_rounded"
+        android:soundEffectsEnabled="true"
+        android:choiceMode="singleChoice"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Repeat"
+        android:textSize="@dimen/_12ssp"
+        android:layout_margin="@dimen/_10sdp"
+        />
+    <ListView
+        android:id="@+id/LVRepeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_less_rounded"
+        android:soundEffectsEnabled="true"
+        android:choiceMode="singleChoice"
+        />
+</LinearLayout>

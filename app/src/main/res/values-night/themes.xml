@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Clock" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/text_color</item>
+        <item name="colorPrimaryVariant">#003700B3</item>
+        <item name="colorOnPrimary">@color/text_color</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#46A8F7</item>
+        <item name="colorSecondaryVariant">@color/purple_200</item>
+        <item name="colorOnSecondary">@color/purple_500</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="21">@color/black</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <color name="listColor">#1E1E1E</color>
+    <color name="listColor2">#464646</color>
+    <color name="background">@color/black</color>
+    <color name="list_text_color">@color/white</color>
+
+    <color name="number_color_in_time_picker">@color/white</color>
+
+
+</resources>

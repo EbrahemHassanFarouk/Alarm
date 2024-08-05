@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbarThumbHorizontal="@drawable/corner"
+    android:scrollbarThumbVertical="@drawable/corner"
+    android:background="@color/background"
+    tools:context=".SoundActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_back_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/backArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/arrow_back"
+            android:textColor="@color/text_color"
+            android:text="   "
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:background="@drawable/ripple_action_circle"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alarm sound"
+            android:layout_toRightOf="@id/backArrow"
+            android:textSize="@dimen/_20ssp"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:layout_marginVertical="@dimen/_16sdp"
+            android:textColor="@color/text_color"
+            />
+    </RelativeLayout>
+<!--<WebView-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--&lt;!&ndash;    how to add html to here (add line H <br>)&ndash;&gt;-->
+<!--    >-->
+<!--</WebView>-->
+    <RelativeLayout
+        android:id="@+id/containerOnOffSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5sdp"
+        >
+
+        <Switch
+            android:id="@+id/switchAlarmSound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner"
+            android:checked="true"
+            android:padding="20dp"
+            android:text="On"
+            android:textOff="Off"
+            android:textOn="On"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+        <FrameLayout
+            android:id="@+id/ringtoneContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/switchAlarmSound"
+
+            >
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

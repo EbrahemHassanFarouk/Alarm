@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".AlarmData">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_260sdp"
+        android:id="@+id/timeContainer"
+        >
+        <TimePicker
+            android:id="@+id/timeSelector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:animateLayoutChanges="true"
+            android:animationCache="true"
+            android:keepScreenOn="true"
+            android:scaleY="1.4"
+            android:scaleX="1.4"
+            android:theme="@style/NumberPickerStyleReleaseTouch"
+            android:timePickerMode="spinner"
+            android:layout_alignParentTop="true"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/corner"
+        android:padding="@dimen/_10sdp"
+        android:layout_below="@id/timeContainer"
+        android:layout_above="@id/btnContainer"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/TVChoiceWeakDays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textSize="@dimen/_15ssp" />
+
+                <ImageButton
+                    android:id="@+id/calendarIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:backgroundTint="@android:color/transparent"
+                    android:src="@android:drawable/ic_menu_my_calendar" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/TVSun"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="sun"
+                    android:text="S"
+                    android:textSize="@dimen/_8ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/TVMon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="mon"
+                    android:text="M"
+                    android:textSize="@dimen/_8ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/TVTus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="tus"
+                    android:text="T"
+                    android:textSize="@dimen/_8ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/TVWin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="win"
+                    android:text="W"
+                    android:textSize="@dimen/_8ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/TVTha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="tha"
+                    android:text="T"
+                    android:textSize="@dimen/_8ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/TVFri"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="fri"
+                    android:text="F"
+                    android:textColor="#2BA1FF"
+                    android:textSize="@dimen/_8ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/TVSat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="sat"
+                    android:text="S"
+                    android:textColor="#BF0000"
+                    android:textSize="@dimen/_8ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/ETAlarmName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:hint="Alarm name"
+                android:minHeight="@dimen/_40sdp" />
+
+            <RelativeLayout
+                android:id="@+id/soundLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/ripple_action_rect"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/TVAlarmSound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Alarm sound"
+                    android:textSize="@dimen/_15ssp" />
+
+                <TextView
+                    android:id="@+id/TVSoundChoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVAlarmSound"
+                    android:gravity="center"
+                    android:text="Alarm sound"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_10ssp" />
+
+                <View
+                    android:id="@+id/linedown1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_8sdp"
+                    android:layout_below="@id/TVSoundChoice"
+                    android:layout_marginTop="@dimen/_13sdp"
+                    android:background="@drawable/line" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchOfSound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" />
+
+                <View
+                    android:layout_width="@dimen/_2sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_above="@id/linedown1"
+                    android:layout_marginRight="@dimen/_7sdp"
+                    android:layout_toLeftOf="@id/switchOfSound"
+                    android:background="@drawable/linev"
+
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/vibrationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/ripple_action_rect"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/TVVibration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Vibration"
+                    android:textSize="@dimen/_15ssp" />
+
+                <TextView
+                    android:id="@+id/TVVibrationChoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVVibration"
+                    android:gravity="center"
+                    android:text="vibration choice"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_10ssp" />
+
+                <View
+                    android:id="@+id/linedown"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_8sdp"
+                    android:layout_below="@id/TVVibrationChoice"
+                    android:layout_marginTop="@dimen/_13sdp"
+                    android:background="@drawable/line" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchOfVibration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" />
+
+                <View
+                    android:layout_width="@dimen/_2sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_above="@id/linedown"
+                    android:layout_marginRight="@dimen/_7sdp"
+                    android:layout_toLeftOf="@id/switchOfVibration"
+                    android:background="@drawable/linev"
+
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/SnoozeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/ripple_action_rect"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/TVSnooze"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Snooze"
+                    android:textSize="@dimen/_15ssp" />
+
+                <TextView
+                    android:id="@+id/TVSnoozeChoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVSnooze"
+                    android:gravity="center"
+                    android:text="Snooze"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_10ssp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchOfSnooze"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" />
+
+                <View
+                    android:layout_width="@dimen/_2sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginRight="@dimen/_7sdp"
+
+                    android:layout_toLeftOf="@id/switchOfSnooze"
+                    android:background="@drawable/linev" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/btnContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_13sdp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/background"
+            android:padding="@dimen/_6sdp"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_15ssp" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/background"
+            android:padding="@dimen/_6sdp"
+            android:text="@string/save"
+
+            android:textAllCaps="false"
+            android:textSize="@dimen/_15ssp" />
+    </LinearLayout>
+
+</RelativeLayout>
